@@ -33,7 +33,7 @@ def get_result():
         if second_number==0:
             result_label.config(text='error')
         else:
-            result_label.config(text=str(first_num/second_number))
+            result_label.config(text=str(round(first_num/second_number,2)))
     
     
 
@@ -100,7 +100,5 @@ btn_eql.config(font=('verdana',14))
 btn_div=Button(root,text='/',bg='#00a65a',fg='white',width=5,height=2,command=lambda : get_operator('/'))
 btn_div.grid(row=4,column=3)
 btn_div.config(font=('verdana',14))
-
-
 
 root.mainloop()
